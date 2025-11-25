@@ -220,7 +220,7 @@ class AnimationManager {
 
 // Utility Functions
 function copyIP() {
-  const ipAddress = 'fehermc.dnet.hu';
+  const ipAddress = 'fejermc.dnet.hu';
   
   if (navigator.clipboard) {
     navigator.clipboard.writeText(ipAddress).then(() => {
