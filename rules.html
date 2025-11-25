@@ -8,31 +8,54 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>
+  // Azonnali téma alkalmazás a flash elkerülésére
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    
+    // Azonnal alkalmazzuk a témát
+    document.documentElement.setAttribute('data-theme', theme);
+    
+    // Header háttér beállítása azonnal
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbar = document.querySelector('.navbar');
+      if (navbar) {
+        const isLightTheme = theme === 'light';
+        if (isLightTheme) {
+          navbar.style.background = 'rgba(233, 236, 239, 0.95)';
+        } else {
+          navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        }
+        navbar.style.backdropFilter = 'blur(10px)';
+      }
+    });
+  })();
+</script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <span class="logo-text">FejérMC</span>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Főoldal</a></li>
-        <li><a href="about.html" class="nav-link">Rólunk</a></li>
-        <li><a href="join.html" class="nav-link">Csatlakozás</a></li>
-        <li><a href="rules.html" class="nav-link active">Szabályok</a></li>
-        <li><a href="login.html" class="nav-link">Bejelentkezés</a></li>
-        <li><a href="register.html" class="nav-link">Regisztráció</a></li>
-      </ul>
-      <button class="theme-toggle" id="themeToggle">
-        <span class="theme-icon">🌙</span>
-      </button>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <span class="logo-text">FejérMC</span>
     </div>
-  </nav>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Főoldal</a></li>
+      <li><a href="about.html" class="nav-link">Rólunk</a></li>
+      <li><a href="join.html" class="nav-link">Csatlakozás</a></li>
+      <li><a href="rules.html" class="nav-link active">Szabályok</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle">
+      <span class="theme-icon">🌙</span>
+    </button>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</nav>
 
   <main class="main-content page-content">
     <section class="page-hero">

@@ -8,6 +8,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Azonnali téma alkalmazás a flash elkerülésére -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        let theme = 'light';
+        if (savedTheme === 'dark') {
+          theme = 'dark';
+        } else if (!savedTheme && systemPrefersDark) {
+          theme = 'dark';
+        }
+        
+        document.documentElement.setAttribute('data-theme', theme);
+        
+        document.addEventListener('DOMContentLoaded', function() {
+          const navbar = document.querySelector('.navbar');
+          if (navbar) {
+            if (theme === 'light') {
+              navbar.style.background = 'rgba(233, 236, 239, 0.95)';
+            } else {
+              navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            }
+            navbar.style.backdropFilter = 'blur(10px)';
+          }
+        });
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
 </head>
 <body>
   <nav class="navbar">
@@ -20,8 +53,6 @@
         <li><a href="about.html" class="nav-link active">Rólunk</a></li>
         <li><a href="join.html" class="nav-link">Csatlakozás</a></li>
         <li><a href="rules.html" class="nav-link">Szabályok</a></li>
-        <li><a href="login.html" class="nav-link">Bejelentkezés</a></li>
-        <li><a href="register.html" class="nav-link">Regisztráció</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle">
         <span class="theme-icon">🌙</span>

@@ -20,8 +20,6 @@
         <li><a href="about.html" class="nav-link">Rólunk</a></li>
         <li><a href="join.html" class="nav-link">Csatlakozás</a></li>
         <li><a href="rules.html" class="nav-link">Szabályok</a></li>
-        <li><a href="login.html" class="nav-link">Bejelentkezés</a></li>
-        <li><a href="register.html" class="nav-link">Regisztráció</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle">
         <span class="theme-icon">🌙</span>
@@ -48,9 +46,21 @@
           </div>
           <div class="server-status">
             <span class="status-indicator online"></span>
-            <span class="status-text">Online - 42/100 játékos</span>
+            <span class="status-text">Online - 0/10 játékos</span>
           </div>
         </div>
+
+        <!-- Admin Controls - Csak development alatt látható -->
+        <div class="admin-controls" id="adminControls">
+          <h4>Admin Szerver Kontroll</h4>
+          <div class="admin-buttons">
+            <button onclick="setServerOnline()" class="btn btn-primary">🟢 Online</button>
+            <button onclick="setServerMaintenance()" class="btn btn-secondary">🟠 Karbantartás</button>
+            <button onclick="setServerOffline()" class="btn btn-offline">⚫ Offline</button>
+            <button onclick="setServerCustom()" class="btn btn-custom">✏️ Egyedi</button>
+          </div>
+        </div>
+
         <div class="hero-buttons">
           <a href="join.html" class="btn btn-primary">Csatlakozás most</a>
           <a href="about.html" class="btn btn-secondary">Tudj meg többet</a>
