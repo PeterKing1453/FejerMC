@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FejérMC - Minecraft Szerver</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">FejérMC</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Főoldal</a></li>
+        <li><a href="about.html" class="nav-link">Rólunk</a></li>
+        <li><a href="join.html" class="nav-link">Csatlakozás</a></li>
+        <li><a href="rules.html" class="nav-link">Szabályok</a></li>
+        <li><a href="login.html" class="nav-link">Bejelentkezés</a></li>
+        <li><a href="register.html" class="nav-link">Regisztráció</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">FejérMC</h1>
+        <p class="hero-subtitle">A legjobb Minecraft élmény vár rád!</p>
+        <div class="server-info">
+          <div class="server-ip">
+            <span class="ip-label">Szerver IP:</span>
+            <span class="ip-address" id="serverIp">fejermc.dnet.hu</span>
+            <button class="copy-btn" onclick="copyIP()">Másolás</button>
+          </div>
+          <div class="server-status">
+            <span class="status-indicator online"></span>
+            <span class="status-text">Online - 42/100 játékos</span>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="join.html" class="btn btn-primary">Csatlakozás most</a>
+          <a href="about.html" class="btn btn-secondary">Tudj meg többet</a>
+        </div>
+      </div>
+      <div class="floating-blocks">
+        <div class="block block-1"></div>
+        <div class="block block-2"></div>
+        <div class="block block-3"></div>
+        <div class="block block-4"></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">Miért válaszd a FejérMC-t?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Lag-mentes játék</h3>
+            <p>Prémium szerverek, optimalizált teljesítmény</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Biztonság</h3>
+            <p>Anti-cheat védelem és aktív moderáció</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3>Egyedi játékmódok</h3>
+            <p>Survival, Creative, PvP és még sok más</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Közösség</h3>
+            <p>Barátságos játékosok és segítőkész staff</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="container">
+        <h2 class="section-title">Legfrissebb hírek</h2>
+        <div class="news-grid">
+          <article class="news-card">
+            <div class="news-date">2025. január 15.</div>
+            <h3>Új PvP aréna megnyitva!</h3>
+            <p>Próbáld ki az új PvP arénát egyedi fegyverekkel és páncélokkal.</p>
+          </article>
+          <article class="news-card">
+            <div class="news-date">2025. január 10.</div>
+            <h3>Téli esemény</h3>
+            <p>Csatlakozz a téli eseményhez és nyerj exkluzív jutalmakat!</p>
+          </article>
+          <article class="news-card">
+            <div class="news-date">2025. január 5.</div>
+            <h3>Szerver frissítés</h3>
+            <p>A szerver frissítve lett a legújabb Minecraft verzióra.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>FejérMC</h4>
+          <p>A legjobb Minecraft szerver Magyarországon</p>
+        </div>
+        <div class="footer-section">
+          <h4>Linkek</h4>
+          <ul>
+            <li><a href="about.html">Rólunk</a></li>
+            <li><a href="rules.html">Szabályok</a></li>
+            <li><a href="join.html">Csatlakozás</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Kapcsolat</h4>
+          <p>Discord: FejérMC#1234</p>
+          <p>Email: info@fejermc.hu</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FejérMC. Minden jog fenntartva.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

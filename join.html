@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Csatlakozás - FejérMC</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">FejérMC</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Főoldal</a></li>
+        <li><a href="about.html" class="nav-link">Rólunk</a></li>
+        <li><a href="join.html" class="nav-link active">Csatlakozás</a></li>
+        <li><a href="rules.html" class="nav-link">Szabályok</a></li>
+        <li><a href="login.html" class="nav-link">Bejelentkezés</a></li>
+        <li><a href="register.html" class="nav-link">Regisztráció</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle">
+        <span class="theme-icon">🌙</span>
+      </button>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main-content page-content">
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title">Csatlakozás</h1>
+        <p class="page-subtitle">Így tudsz csatlakozni a FejérMC szerverhez</p>
+      </div>
+    </section>
+
+    <section class="join-content">
+      <div class="container">
+        <div class="join-steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Indítsd el a Minecraft-ot</h3>
+            <p>Győződj meg róla, hogy a legfrissebb verzióval rendelkezel</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Válaszd a Multiplayer opciót</h3>
+            <p>A főmenüben kattints a "Multiplayer" gombra</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Add hozzá a szervert</h3>
+            <p>Kattints az "Add Server" gombra és add meg az IP címet</p>
+          </div>
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Csatlakozz!</h3>
+            <p>Dupla kattintás a szerverre és máris játszhatsz!</p>
+          </div>
+        </div>
+
+        <div class="server-details">
+          <div class="detail-card">
+            <h3>Szerver információk</h3>
+            <div class="server-info-grid">
+              <div class="info-item">
+                <span class="info-label">IP cím:</span>
+                <span class="info-value">fehermc.dnet.hu</span>
+                <button class="copy-btn" onclick="copyIP()">Másolás</button>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Port:</span>
+                <span class="info-value">25565 (alapértelmezett)</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Verzió:</span>
+                <span class="info-value">1.20.4</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Játékmód:</span>
+                <span class="info-value">Survival, Creative, PvP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <h3>Rendszerkövetelmények</h3>
+            <ul class="requirements-list">
+              <li>Minecraft Java Edition 1.20+</li>
+              <li>Stabil internetkapcsolat</li>
+              <li>Minimum 2GB RAM</li>
+              <li>Java 17 vagy újabb</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="help-section">
+          <h3>Segítségre van szükséged?</h3>
+          <p>Ha problémába ütközöl a csatlakozás során, ne habozz kapcsolatba lépni velünk!</p>
+          <div class="help-buttons">
+            <a href="#" class="btn btn-primary">Discord szerver</a>
+            <a href="#" class="btn btn-secondary">Támogatás</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>FejérMC</h4>
+          <p>A legjobb Minecraft szerver Magyarországon</p>
+        </div>
+        <div class="footer-section">
+          <h4>Linkek</h4>
+          <ul>
+            <li><a href="about.html">Rólunk</a></li>
+            <li><a href="rules.html">Szabályok</a></li>
+            <li><a href="join.html">Csatlakozás</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Kapcsolat</h4>
+          <p>Discord: FejérMC#1234</p>
+          <p>Email: info@fejermc.hu</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FejérMC. Minden jog fenntartva.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
